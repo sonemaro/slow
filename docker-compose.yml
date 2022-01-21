@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    environment:
+      APP_ADDRESS: ${APP_ADDRESS}
+      APP_PORT: ${APP_PORT}
+      DB_TYPE: ${DB_TYPE}
+      LOG_FILE: ${LOG_FILE}
+    ports:
+      - "8080:${APP_PORT}"
+    volumes:
+      - ./:/app
+    networks:
+      - default
