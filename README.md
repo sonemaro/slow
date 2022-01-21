@@ -7,10 +7,10 @@ It parses slow queries and provides a set of APIs over http.
 ### ***Source Code***
 To build `slow` run this command:
 ```shell
-go get -u github.com/sonemaro/slow
+go install github.com/sonemaro/slow/cmd/slow@latest
 ```
 ### ***Release***
-Release
+You also can download the latest binary from `Release`(https://github.com/sonemaro/slow/releases) section.
 
 ## Config
 I tried my best to write `slow` based on `Twelve Factors` (https://12factor.net) so there isn't any configuration file. All you need is to set a few environment variables and there you go!
